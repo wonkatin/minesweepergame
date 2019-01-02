@@ -9,3 +9,9 @@ console.log(guessLine);
 console.log(bombLine);
 console.log(blankLine);*/
 //CLEAN SLATE
+let board = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' ']
+];
+console.log(board);
