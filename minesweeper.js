@@ -42,7 +42,27 @@ const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
     board.push(row);
   };
   return board;
-
-
 };
 console.log(generatePlayerBoard(3,3));
+
+const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
+  const board = [];
+  for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+    const row = [];
+    for (let columnIndex = 0; columnIndex < numberOfColumns; columnIndex++) {
+      row.push(null);
+    }
+    board.push(row);
+  };
+  let numberOfBombsPlaced = 0;
+  while (numberOfBombsPlaced < numberOfBombs) {
+    let randomRowIndex = Math.floor(Math.random() * numberOfRows);
+    let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
+    board[randomRowIndex][randomColumnIndex] = 'B';
+    numberOfBombsPlaced++;
+    //This code has the potential to place bombs on top of already existing bombs.
+  };
+
+  return board;
+};
+console.log(generateBombBoard(3,3,3));
