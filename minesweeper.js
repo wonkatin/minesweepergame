@@ -10,7 +10,7 @@ console.log(bombLine);
 console.log(blankLine);*/
 //CLEAN SLATE
 
-const printBoard = board => {
+/*const printBoard = board => {
   console.log("Current Board: ");
   console.log(board[0].join(' | '));
   console.log(board[1].join(' | '));
@@ -29,4 +29,5 @@ board[0][1] = "1";
 
 board[2][2] = "B";
 
-printBoard(board);
+printBoard(board);*/
+//CLEAN SLATE 2
