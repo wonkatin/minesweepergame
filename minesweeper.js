@@ -59,9 +59,9 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
   while (numberOfBombsPlaced < numberOfBombs) {
     let randomRowIndex = Math.floor(Math.random() * numberOfRows);
     let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
+    if (board[randomRowIndex][randomColumnIndex] != 'B'){
     board[randomRowIndex][randomColumnIndex] = 'B';
-    numberOfBombsPlaced++;
-    //This code has the potential to place bombs on top of already existing bombs, this will be fixed with control flow.
+    numberOfBombsPlaced++;};
   };
 
   return board;
@@ -80,4 +80,3 @@ console.log('Player Board: ');
 printBoard(playerBoard);
 console.log('Bomb Board: ');
 printBoard(bombBoard);
-//bomb board will sometimes have less bombs than specified bc of the error in numberOfBombsPlaced code, to be fixed with control flow.
