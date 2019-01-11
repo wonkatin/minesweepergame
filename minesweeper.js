@@ -67,14 +67,27 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
   return board;
 };
 
+const getNumberOfNeighborBombs = (bombBoard, rowIndex, columnIndex) =>{
+  const neighborOffsets = [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
+    [0, -1],
+    [0, 1],
+    [1, -1],
+    [1, 0],
+    [1, 1],
+];
+}
+
 //console.log(generateBombBoard(3,3,3));
 
 const printBoard = board => {
   console.log(board.map(row => row.join(' | ')).join('\n'));
 };
 
-let playerBoard = generatePlayerBoard(3,4);
-let bombBoard = generateBombBoard(3,4,5);
+let playerBoard = generatePlayerBoard(8,8);
+let bombBoard = generateBombBoard(8,8,5);
 
 console.log('Player Board: ');
 printBoard(playerBoard);
